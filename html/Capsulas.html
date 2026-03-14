@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cápsulas</title>
+    <script type="text/javascript">
+        var capsulas = [
+        ["","","vazio",""],
+        ["Espresso","CapDolceGusto_10_Espresso","10","R$ 18,00"],
+        ["Intenso","CapDolceGusto_10_Intenso","10","R$ 44,00"],
+        ["Forza/Vibrante","CapTresCoracoes_30_ForzaVibrante","30","R$ 19,00"],
+        ["Três Cor. Intenso","CapTresCoracoesNespreso_10_Intenso", "10", "R$ 21,00"],
+        ["Lor Forza","CapLorNespreso_10_Forza","10", "R$ 20,00"],
+        ]
+        function Exibir(ind) {
+        var titulo = document.getElementById("titDes");
+        var foto = document.getElementById("imgDes");
+        var qtd = document.getElementById("qtd");
+        var preco = document.getElementById("prcDes");
+        titulo.innerHTML = "<h2>" + capsulas[ind][0] + "<br/>" + "</h2><br/>"; 
+        foto.src = "../Imagens/" + capsulas[ind][1] + ".jpg";
+        qtd.innerHTML ="<p> QTD: " + capsulas[ind][2] + "</p>";
+        preco.innerHTML = "<p>Preço: R$ <span class='preco'>" + capsulas[ind][3] + "</p>";
+}
+    </script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&display=swap" rel="stylesheet">
+<body>
+    <header>
+    <img class="imgLogo" src="../Imagens/EspumaEraLeiTopo.png"> 
+    <address class="ender">
+        Via expressa
+        <br>
+        Tel: (21) 91122-3344
+        <br>
+        contato@espumaeralei.com.br
+    </address>
+    </header>
+    <nav>
+        <ul class="lprincipal">
+            <li><a href="../html/EspumaEraLei.html">Apresentação</a></li>
+            <li><a href="../html/Cafeteiras.html">Cafeteiras</a></li>
+            <li><a href="../html/Capsulas.html">Cápsulas</a></li>
+            <li><a href="../html/Pedidos.html">Pedidos</a></li>
+        </ul>  
+    </nav>
+    <section>
+    <table class="tabCap">
+        <tr>
+            <th colspan="5" class="linTH">Cápsulas</th>
+        </tr>
+        <tr>
+            <th class="linTH">Máquina</th>
+            <th class="linTH">Tipo</th>
+            <th colspan="5" class="linTH">Descrição</th>
+        </tr>
+        <tr>
+            <th rowspan="2" class="colTH">Dolce Gusto</th>
+            <td class="menuTab"><a target="_self"
+                href="javascript:Exibir(1);">Espresso</td>
+            <td rowspan="5">
+                <div id="titDes"><br/></p>
+                </div>
+                <img id="imgDes" src="../Imagens/vazio.jpg">
+                <div id="qtd"></div>
+                <div id="prcDes"></div>
+            </td>
+        <tr>
+                <td class="menuTab"><a target="_self"
+                    href="javascript:Exibir(2);">Intenso</td>
+        </tr>
+        <tr>
+                <th class="colTH">Três corações</th>
+                <td class="menuTab"><a target="_self"
+                    href="javascript:Exibir(3);">Forza/Vibrante</td>
+            
+        </tr>
+                <th rowspan="2" class="colTH">Nespresso</th>
+                <td class="menuTab"><a target="_self"
+                    href="javascript:Exibir(4);">Três Cor. Intenso</td>
+        <tr>
+                <td class="menuTab"><a target="_self"
+                    href="javascript:Exibir(5);">Lor Forza</td>
+        </tr>
+    </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pagamento</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <img class="imgLogo" src="../Imagens/EspumaEraLeiTopo.png">
+        <address class="ender">
+            Via expressa
+            <br>
+            Tel: (21) 91122-3344
+            <br>
+            contato@espumaeralei.com.br
+        </address>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../html/EspumaEraLei.html">Apresentação</a></li>
+            <li><a href="../html/Cafeteiras.html">Cafeteiras</a></li>
+            <li><a href="../html/Capsulas.html">Cápsulas</a></li>
+            <li><a href="../html/Pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form class="formBox" method="get">
+            <fieldset class="FSLinhaInteira">
+                <legend>Identificação</legend>
+                <div class="divLinha">
+                    <label class="colPri">Nome:</label>
+                    <input type="text" class="inpNameMail" name="nome">
+                </div>
+                <div class="divLinha">
+                    <label class="colPri">E-mail:</label>
+                    <input type="email" class="inpNameMail" name="email">
+                </div>
+                <div class="divLinha">
+                    <label class="colPri">Endereço:</label>
+                    <textarea class="inpEnderp2"></textarea>
+                    <fieldset class="FSDir">
+                        <legend>Gênero</legend>
+                        <label name="Mas">Mas</label>
+                        <input type="radio" name="gen>" value="M" checked>
+                        <label name="fem">Fem</label>
+                        <input type="radio" name="gen>" value="F">
+                        <label name="gen">Outro</label>
+                        <input type="radio" name="gen" value="o">
+                    </fieldset>
+                    <fieldset class="FSDir">
+                        <legend>Nascimento</legend>
+                        <input class="numDD" type="number" name="dia" min="1" max="31" class="numDD">
+                        <input class="numDD" type="number" name="mes" min="1" max="12" class="numDD">
+                        <input class="numQD" type="number" name="ano" min="1930" max="2005" class="numDD">
+                    </fieldset>
+                </div>
+                <div class="divLinha">
+                    <label class="colPri">Telefone:</label>
+                    <input type="tel" class="inpTelef" name="telefone">
+                </div>
+                <div class="divLinha">
+                    <label class="colPri">Celular:</label>
+                    <input type="tel" class="inpTelef" name="Celular">
+                </div>
+            </fieldset>
+            <fieldset class="FSLinhaInteira">
+                <legend>Pagamento</legend>
+                <div class="FSDir">
+                    <textarea class="listaCompras" name="listaPedidos" readonly></textarea>
+                </div>
+                <fieldset class="colLabCard">
+                    <legend>Cartão</legend>
+                    <div class="FSEsq" id="inpBandeira">
+                        <label class="LabelCard" name="bandeira">Bandeira:</label>
+                        <input type="radio" name="card" checked>
+                        <label name="visa">Visa</label>
+                        <input type="radio" name="card">
+                        <label name="visa">Master</label>
+                        <input type="radio" name="card">
+                        <label name="visa">Elo</label>
+                    </div>
+                    <div class="FSEsq">
+                        <label class="LabelCard" name="vencimento">Validade:</label>
+                        <input class="numDD" type="number" name="mes" min="1" max="12" class="numDD">
+                        <input class="numQD" type="number" name="ano" min="2024" max="2050" class="numDD">
+                    </div>
+                    <div class="FSEsq">
+                        <label class="LabelCard">Número:</label>
+                        <input class="inpNCC" type="number" class="numcard" name="numcard">
+                    </div>
+                </fieldset>
+                <div class="colValTot">
+                    <label class="LabBox" for="valorTotal">Valor Total: R$</label>
+                    <input class="InpBoxMedLeft" type="number" id="valorTotal" readonly>
+                </div>
+            </fieldset>
+            <div class="botoes">
+                <button type="submit" id="continuar">Enviar</button>
+                <button type="reset" id="limpar">Limpar</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

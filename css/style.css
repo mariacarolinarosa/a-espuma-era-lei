@@ -1,0 +1,298 @@
+html{
+    font-family: Karla, Verdana, Ubuntu;
+}
+body{
+    background-color: #EEBB88;
+    color: #402020;
+    font-size: 16px;
+    font-family: Stroke, Lucida-Bright, Liberation;
+}
+header {
+    display:block;
+    margin-bottom: 1px; 
+}
+nav { 
+    display:block; 
+    width: 20%; 
+    float: left; 
+}
+section {
+    display:block; 
+    width: 70%; 
+    float: right;
+}
+a:link{
+    color: #603030;
+    text-decoration: none;
+}
+a:visited{
+    color: #603030;
+    text-decoration: none;
+}
+ul, ol{
+    line-height: 200%;
+}
+.apres{
+    font-size: 16px;
+    text-align: center;
+    
+}
+.imgLogo{
+    border-bottom: solid 3px;
+    color: #402020;
+    margin-bottom: 6px;
+    padding-bottom: 15px;
+}
+nav ul{
+    color: #332277;
+    line-height: 230%;
+    margin-top: 40px;
+    list-style-type: circle;
+}
+
+.ender{
+    float: right;
+    text-align: right;
+    line-height: 140%;
+    font-size: 14px;
+    font-family: Karla, Verdana, Ubuntu;
+}
+.listMaq{
+    width: 340px;
+    color: #402020;
+    background-color: #EEDDCC;
+    padding: 10px 10px 10px 50px;
+    border: solid 2px #402020;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: upper-roman;
+}
+.listMaq span{
+   color: #CC0000;
+}
+.listMaq ul{
+    list-style-type: square;
+}
+section h1{
+    text-align: center;
+}
+.tabCap{
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 15px;
+    background-color: #EEDDCC;
+    color: #402020;
+    font-family: Karla, Verdana, Ubuntu;
+}
+th{
+    border: solid 3px #888888;
+    padding: 6px 12px 6px 12px;
+}
+td{
+    border: solid 3px #000066;
+    padding: 6px 12px 6px 12px;
+}
+.imgCel{
+    height: 60px;
+    width: 60px;
+    background-color: #FFFFFF;
+}
+.linTH{
+    color: #FFFFFF;
+    background-color: #402020;
+    vertical-align: middle;
+    text-align: center;
+}
+.colTH{
+    color: #FFFFFF;
+    text-align: left;
+    background-color: #804040;
+}
+.preco{
+    color: red;
+}
+.formBox{
+    width: 540px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #EEDDCC;
+    border: solid 3px #000055;
+    font-size: 16px;
+    font-family: Karla, verdana, Ubuntu;
+}
+.FSLinhaInteira{
+    width: 510px;
+    text-align: left;
+}
+.FSEsq{
+    display: inline;
+    float: left;
+    margin: none;
+}
+.FSDir{
+    float: right;
+    display: inline;
+    margin: none;
+}
+.linhaForm{
+    margin: 0px;
+    padding: 6px 3px 0px 3px;
+    height: 30px;
+}
+.ColEsq{
+    width: 180px;
+    float: left;
+    display: block;
+}
+.ColDir{
+    width: 130px;
+    float: right;
+    display: block;
+}
+.LabBox{
+    width: 130px;
+    float: left;
+    display: block;
+}
+.botoes{
+    text-align: right;
+    margin: 20px 10px 0px 10px;
+}
+.InpBoxMed{
+    width: 80px;
+}
+.numDD{
+    width: 35px;
+}
+.ColEsqSelProd{
+    width: 360px;
+    float: left;
+    display: block;
+}
+.colEsqValUnit{
+    width: 250px;
+    display: block;
+    float: left;
+}
+.LabBoxSel{
+    width: 90px;
+    float: left;
+    display: block;
+}
+.LabBoxQtd{
+    width: 40px;
+    float: left;
+    display: block;
+}
+.InpBoxMedLeft{
+    width: 80px;
+    float: left;
+    display: block;
+}
+#selMaquina{
+    width: 75%;
+}
+#selCapsula{
+    width: 75%;
+}
+.inpNameMail{
+    width: 370px;
+}
+#boxPedidos{
+    margin: 0px;
+    padding: 6px 3px 0px 3px;
+    height: 100px;
+}
+#lisPedArea{
+	width: 100%;
+	height: 90%
+}
+.divLinha{
+    margin: 0px;
+    width: 500px;
+    padding: 6px 3px 0px 3px;
+}
+.colPri{
+    width: 90px;
+    float: left;
+    display: block;
+}
+.colLabCard{
+    width: 270px;
+    text-align: left;
+    float: left;
+}
+.colValTot{
+    width: 220px;
+    text-align: left;
+    float: left;
+    display: block;
+    margin-top: 50px;
+}
+.listaCompras{
+    height: 200px;
+    width: 190px;
+    float: right;
+    margin-top: 8px ;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.InpBoxGnd{
+    width: 380px;
+}
+.numQD{
+    width: 50px;
+}
+.inpNCC{
+    width: 130px;
+}
+.inpTelef{
+    width: 90px;
+}
+.inpEnderp2{
+    width: 180px;
+    height: 60px;
+}
+.LabelCard{
+    width: 80px;
+    float: left;
+    display: block;
+    margin-bottom: 15px;
+}
+#inpBandeira{
+    float: left;
+    display: block;
+    margin-top: 10px;
+}
+button{
+    height: 25px;
+}
+input{
+    height: 20px;
+}
+select{
+    height: 30px;
+}
+.cafeteiras{
+    display: block;
+    text-align: center;
+}
+#imgDes{
+    height: 150px;
+    width: 150px;
+    display: block;
+    text-align: center;
+}
+#titDes,#prcDes,#qtd{
+    display: block;
+    text-align: center;
+}
+.menuTab{
+   height: 50px;
+}
+.janNova{
+    text-align: center;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pedidos</title>
+    <script type="text/javascript">
+    var tabMaq = [
+    ["", 0],
+    ["", 500],
+    ["", 530],
+    ["", 500],
+    ["", 400] ];
+   
+    function IncluiCaf( sel ) {
+    var prod = sel.selectedIndex;
+    if ( prod != 0 ) {
+    var tip = tabMaq[prod][0];
+    var prc = tabMaq[prod][1];
+    sel.selectedIndex = 0;
+    var preco=tabMaq[prod][1];
+    var qtd= document.querySelector("#quantidadeMaquinas").value;
+    var unitario=(preco*qtd);
+    valorUnitario.value = unitario;
+    with ( sel.form ) {
+        LP.value += tip + sel.options[prod].text +" " + "("+ qtd+ ")" + " R$ "+ unitario +",00"+"\n";
+        valorTotal.value= parseInt(valorTotal.value)+unitario;
+    }
+ }
+ else
+ alert("Nenhum Produto selecionado!");
+}
+
+function testeMaq( sel ) {
+    var prod = sel.selectedIndex;
+    if ( prod != 0 ) {
+    var preco=tabMaq[prod][1];
+    var qtd= document.querySelector("#quantidadeMaquinas").value;
+    unitario=(preco*qtd);
+    valorUnitario.value = unitario;
+ }
+}
+
+
+    var tabCaps = [
+    ["", 0],
+    ["", 18],
+    ["", 44],
+    ["", 19],
+    ["", 21],
+    ["", 20] ];
+ 
+       
+    function IncluiCap( sel ) {
+    var prod = sel.selectedIndex;
+    if ( prod != 0 ) {
+    var tip = tabCaps[prod][0];
+    var prc = tabCaps[prod][1];
+    sel.selectedIndex = 0;
+    var preco=tabCaps[prod][1];
+    var qtd= document.querySelector("#quantidadeCapsulas").value;
+    unitario=(preco*qtd);
+    valorUnitario.value = unitario;
+    with ( sel.form ) {
+    LP.value += tip + sel.options[prod].text +" " + "("+ qtd+ ")" + " R$ "+ unitario +",00"+"\n";
+    valorTotal.value= parseInt(valorTotal.value)+unitario;
+ }
+ }
+ else
+ alert("Nenhum Produto selecionado!");
+}
+
+function testeCap( sel ) {
+    var prod = sel.selectedIndex;
+    if ( prod != 0 ) {
+    var preco=tabCaps[prod][1];
+    var qtd= document.querySelector("#quantidadeCapsulas").value;
+    unitario=(preco*qtd);
+    valorUnitario.value = unitario;
+    }
+}
+    </script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <img class="imgLogo" src="../Imagens/EspumaEraLeiTopo.png">
+        <address class="ender">
+            Via expressa
+            <br>
+            Tel: (21) 91122-3344
+            <br>
+            contato@espumaeralei.com.br
+        </address>
+    </header>
+    <nav>
+        <ul class="lprincipal">
+            <li><a href="../html/EspumaEraLei.html">Apresentação</a></li>
+            <li><a href="../html/Cafeteiras.html">Cafeteiras</a></li>
+            <li><a href="../html/Capsulas.html">Cápsulas</a></li>
+            <li><a href="../html/Pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form class="formBox" method="get" action="../html/DadosPagamento.html">
+            <fieldset class="FSLinhaInteira">
+                <legend>Seleção de Produtos e Lista de Compras</legend>
+                <div class="linhaForm">
+                    <div class="ColEsqSelProd">
+                        <label class="LabBoxSel" for="maquinas">Máquinas</label>
+                        <select id="selMaquina" name="maquinas" onClick="testeMaq( this.form.selMaquina );">
+                            <option>-----</option>
+                            <optgroup label="Dolce Gusto">
+                                <option>Minie ME</option>
+                                <option>Genio S Plus</option>
+                            </optgroup>
+                            <optgroup label="Nespresso">
+                                <option>Inissia</option>
+                            </optgroup>
+                            <optgroup label="Três Corações">
+                                <option>LOV</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="ColDir">
+                        <label class="LabBoxQtd" for="quantidadeMaquinas">QTD</label>
+                        <input class="numDD" type="number" min="1" max="5" value="1" id="quantidadeMaquinas" onClick="testeMaq( this.form.selMaquina );">
+                        <button type="button" value="+" onClick="IncluiCaf( this.form.selMaquina );">+</button>
+                    </div>
+                </div>
+                <div class="linhaForm">
+                    <div class="ColEsqSelProd">
+                        <label class="LabBoxSel" for="capsulas">Cápsulas</label>
+                        <select id="selCapsula" name="capsulas"  onClick="testeCap( this.form.selCapsula);">
+                            <option>-----</option>
+                            <optgroup label="Tipo Dolce Gusto">
+                                <option>Dolce Gusto Espresso</option>
+                                <option>Dolce Gusto Intenso</option>
+                            </optgroup>
+                            <optgroup label="Tipo Três Corações">
+                                <option>Força/Vibrante</option>
+                            </optgroup>
+                            <optgroup label="Tipo Nespresso">
+                                <option>Três Corações Intenso</option>
+                                <option>Lor Forza</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="ColDir">
+                        <label class="LabBoxQtd" for="quantidadeCapsulas">QTD</label>
+                        <input class="numDD" type="number" min="1" max="30" value="1" id="quantidadeCapsulas" onClick="testeCap( this.form.selCapsula);">
+                        <button type="button" value="+" onClick="IncluiCap( this.form.selCapsula );">+</button>
+                    </div>
+                </div>
+                <div class="linhaForm">
+                    <div class="ColEsqValUnit"">
+                <label class=" LabBox" for="valorUnitario">Valor X QTD: R$</label>
+                        <input class="InpBoxMedLeft" type="number" id="valorUnitario"  value="0">
+                    </div>
+                </div>
+                <div class="linhaForm" id="boxPedidos">
+                    <textarea id="lisPedArea" name="LP"></textarea>
+                </div>
+                <div class="linhaForm">
+                    <div class="ColEsqValUnit">
+                        <label class="LabBox" for="valorTotal">Valor Total: R$</label>
+                        <input class="InpBoxMedLeft" name="valorTotal" type="text" id="valorTotal" value="0">
+                    </div>
+                </div>
+                </div>
+            </fieldset>
+            <div class="botoes">
+                <button type="submit" id="continuar">Comprar</button>
+                <button type="reset" id="limpar">Limpar</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

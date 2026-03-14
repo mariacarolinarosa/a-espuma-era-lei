@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cafeterias</title>
+    <script type="text/javascript">
+            var tabCaf= new Array(4);
+            tabCaf[0]=["Mini ME", "Dolce Gusto","DolceGustoMiniME","R$ 480,00"];
+            tabCaf[1]=["Gênio S Plus", "Dolce Gusto","DolceGustoGenioSPlus","R$ 530,00"];
+            tabCaf[2]=["Inissia","Nespresso","NespressoInissia","R$ 500,00"];
+            tabCaf[3]=["LOV","Três Corações","TresCoracoesLOV","R$ 400,00"];
+
+            function MostraCaf(tipo) {
+var janela = open("", tabCaf[tipo][0], "location=no,status=no," + "width=320,height=455");
+
+ with (janela.document) {
+ write("<!DOCTYPE html>");
+ write("<html><head><title>Cafeterias</title>");
+ write("<link rel='stylesheet' href='../css/style.css'>");
+ write("<div class='janNova'>")
+ write("</head><body>");
+ write("<h2>", tabCaf[tipo][0], "</h2>");
+ write("<p><img src='../Imagens/", tabCaf[tipo][2], ".jpg' /></p>");
+ write("<p> Cápsulas: ")
+ write(tabCaf[tipo][1],"</p>")
+ write("<p>Preço: ");
+ write(tabCaf[tipo][3],"</p>");
+ write("<input type='button' value='Fechar' ");
+ write("onClick='window.close();'/>");
+ write("</div>")
+ close();
+ }
+}
+    </script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <img class="imgLogo" src="../Imagens/EspumaEraLeiTopo.png">
+        <address class="ender">
+            Via expressa
+            <br>
+            Tel: (21) 91122-3344
+            <br>
+            contato@espumaeralei.com.br
+        </address>
+    </header>
+    <nav>
+        <ul class="lprincipal">
+            <li><a href="../html/EspumaEraLei.html">Apresentação</a></li>
+            <li><a href="../html/Cafeteiras.html">Cafeteiras</a></li>
+            <li><a href="../html/Capsulas.html">Cápsulas</a></li>
+            <li><a href="../html/Pedidos.html">Pedidos</a></li>
+        </ul>
+        </ul>
+    </nav>
+    <section>
+        <h1>Cafeteiras</h1>
+        <ol class="listMaq">
+            <li>Dolce Gusto</li>
+            <ul>
+                <li><a target="_self" href="javascript:MostraCaf(0);">Mini ME (R$ <span>480,00</span>)</a></li>
+                <li><a target="_self" href="javascript:MostraCaf(1);">Genio S Plus (R$ <span>530,00</span>)</a></li>
+            </ul>
+            <li>Nespresso</li>
+            <ul>
+                <li><a target="_self" href="javascript:MostraCaf(2);">Inissia (R$ <span>500,00</span>)</a></li>
+            </ul>
+            <li>Três corações</li>
+            <ul>
+                <li><a target="_self" href="javascript:MostraCaf(3);">LOV (R$ <span>400,00</span>)</a></li>
+            </ul>
+        </ol>
+    </section>
+</body>
+</html>
