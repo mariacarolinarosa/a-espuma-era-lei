@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Pedidos</title>
     <script type="text/javascript">
+    
     var tabMaq = [
     ["", 0],
     ["", 500],
@@ -23,10 +24,8 @@
     var qtd= document.querySelector("#quantidadeMaquinas").value;
     var unitario=(preco*qtd);
     valorUnitario.value = unitario;
-    with ( sel.form ) {
-        LP.value += tip + sel.options[prod].text +" " + "("+ qtd+ ")" + " R$ "+ unitario +",00"+"\n";
-        valorTotal.value= parseInt(valorTotal.value)+unitario;
-    }
+    document.getElementById('lisPedArea').value += tip + sel.options[prod].text + " (" + qtd + ") R$ " + unitario + ",00\n";
+document.getElementById('valorTotal').value = parseInt(document.getElementById('valorTotal').value) + unitario;
  }
  else
  alert("Nenhum Produto selecionado!");
@@ -62,10 +61,9 @@ function testeMaq( sel ) {
     var qtd= document.querySelector("#quantidadeCapsulas").value;
     unitario=(preco*qtd);
     valorUnitario.value = unitario;
-    with ( sel.form ) {
-    LP.value += tip + sel.options[prod].text +" " + "("+ qtd+ ")" + " R$ "+ unitario +",00"+"\n";
-    valorTotal.value= parseInt(valorTotal.value)+unitario;
- }
+    document.getElementById('lisPedArea').value += tip + sel.options[prod].text + " (" + qtd + ") R$ " + unitario + ",00\n";
+    document.getElementById('valorTotal').value = parseInt(document.getElementById('valorTotal').value) + unitario;
+
  }
  else
  alert("Nenhum Produto selecionado!");
@@ -98,7 +96,7 @@ function testeCap( sel ) {
     </header>
     <nav>
         <ul class="lprincipal">
-            <li><a href="../html/EspumaEraLei.html">Apresentação</a></li>
+            <li><a href="../index.html">Apresentação</a></li>
             <li><a href="../html/Cafeteiras.html">Cafeteiras</a></li>
             <li><a href="../html/Capsulas.html">Cápsulas</a></li>
             <li><a href="../html/Pedidos.html">Pedidos</a></li>
